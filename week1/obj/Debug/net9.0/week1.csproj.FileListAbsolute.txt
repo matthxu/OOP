@@ -1,0 +1,14 @@
+C:\Downloads\swin\OOP\week1\bin\Debug\net9.0\week1.exe
+C:\Downloads\swin\OOP\week1\bin\Debug\net9.0\week1.deps.json
+C:\Downloads\swin\OOP\week1\bin\Debug\net9.0\week1.runtimeconfig.json
+C:\Downloads\swin\OOP\week1\bin\Debug\net9.0\week1.dll
+C:\Downloads\swin\OOP\week1\bin\Debug\net9.0\week1.pdb
+C:\Downloads\swin\OOP\week1\obj\Debug\net9.0\week1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Downloads\swin\OOP\week1\obj\Debug\net9.0\week1.AssemblyInfoInputs.cache
+C:\Downloads\swin\OOP\week1\obj\Debug\net9.0\week1.AssemblyInfo.cs
+C:\Downloads\swin\OOP\week1\obj\Debug\net9.0\week1.csproj.CoreCompileInputs.cache
+C:\Downloads\swin\OOP\week1\obj\Debug\net9.0\week1.dll
+C:\Downloads\swin\OOP\week1\obj\Debug\net9.0\refint\week1.dll
+C:\Downloads\swin\OOP\week1\obj\Debug\net9.0\week1.pdb
+C:\Downloads\swin\OOP\week1\obj\Debug\net9.0\week1.genruntimeconfig.cache
+C:\Downloads\swin\OOP\week1\obj\Debug\net9.0\ref\week1.dll
