@@ -346,6 +346,16 @@
             "related": ".xml"
           }
         }
+      },
+      "ObjectUnitTests/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ObjectUnitTests.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObjectUnitTests.dll": {}
+        }
       }
     }
   },
@@ -793,6 +803,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ObjectUnitTests/1.0.0": {
+      "type": "project",
+      "path": "../ObjectUnitTests/ObjectUnitTests.csproj",
+      "msbuildProject": "../ObjectUnitTests/ObjectUnitTests.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -801,6 +816,7 @@
       "NUnit >= 4.2.2",
       "NUnit.Analyzers >= 4.4.0",
       "NUnit3TestAdapter >= 4.6.0",
+      "ObjectUnitTests >= 1.0.0",
       "coverlet.collector >= 6.0.2"
     ]
   },
@@ -828,7 +844,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Downloads\\swin\\OOP\\week3\\task3.1\\ObjectUnitTests\\ObjectUnitTests.csproj": {
+              "projectPath": "C:\\Downloads\\swin\\OOP\\week3\\task3.1\\ObjectUnitTests\\ObjectUnitTests.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,15 @@
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\Items.GeneratedMSBuildEditorConfig.editorconfig
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\Items.AssemblyInfoInputs.cache
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\Items.AssemblyInfo.cs
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\Items.csproj.CoreCompileInputs.cache
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\Items.sourcelink.json
+C:\Downloads\swin\OOP\week3\task3.2\Items\bin\Debug\net9.0\Items.exe
+C:\Downloads\swin\OOP\week3\task3.2\Items\bin\Debug\net9.0\Items.deps.json
+C:\Downloads\swin\OOP\week3\task3.2\Items\bin\Debug\net9.0\Items.runtimeconfig.json
+C:\Downloads\swin\OOP\week3\task3.2\Items\bin\Debug\net9.0\Items.dll
+C:\Downloads\swin\OOP\week3\task3.2\Items\bin\Debug\net9.0\Items.pdb
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\Items.dll
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\refint\Items.dll
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\Items.pdb
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\Items.genruntimeconfig.cache
+C:\Downloads\swin\OOP\week3\task3.2\Items\obj\Debug\net9.0\ref\Items.dll

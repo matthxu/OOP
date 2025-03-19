@@ -1,50 +1,52 @@
 ﻿namespace appTest;
 
 public class Tests
-{
-    [SetUp]
-    public void Setup()
-    {
-    }
-
+{    
     [Test]
     public void TestAreYou()
     {
-        if (name) {
-
-        }
-        Assert.That();
+        IdentifiableObject TestVariable = new IdentifiableObject(new List<string> {"5875"});
+        Assert.That(TestVariable.AreYou("5875"), Is.True);
     }
     
     [Test]
-    public void TestNotAreYou(result)
+    public void TestNotAreYou()
     {
-        Assert.That(result, Is.True, $"{result} is not the same.");
+        IdentifiableObject TestVariable = new IdentifiableObject(new List<string> {"5875"});
+        Assert.That(TestVariable.AreYou("5555"), Is.False);
     }
-    
+    [Test]
+    public void TestCaseSensitive()
+    {
+        IdentifiableObject TestVariable = new IdentifiableObject(new List<string> {"matthew"});
+        Assert.That(TestVariable.AreYou("mATTHEW"), Is.True);
+    }
+    [Test]
+    public void TestFirstId() 
+    {
+        IdentifiableObject TestVariable = new IdentifiableObject(new List<string> {"5875", "Matthew", "Xu"});
+        Assert.That(TestVariable.FirstId, Is.EqualTo("5875"));
+    }
+    [Test]
+    public void TestFirstIdWithNoIds()
+    {
+        IdentifiableObject TestVariable = new IdentifiableObject(new List<string> {});
+        Assert.That(TestVariable.FirstId, Is.EqualTo(""));
+    }
+    [Test]
+    public void TestAddId()
+    {
+        IdentifiableObject TestVariable = new IdentifiableObject(new List<string> {"seekers", "athol", "keith", "bruce"});
+        TestVariable.AddIdentifier("Mary");
+        Assert.That(TestVariable.AreYou("seekers"), Is.True);
+        Assert.That(TestVariable.AreYou("keith"), Is.True);
+        Assert.That(TestVariable.AreYou("mary"), Is.True);
+    }
+    [Test]
+    public void TestPrivilegeEscalation()
+    {
+        IdentifiableObject TestVariable = new IdentifiableObject(new List<string> {"#2"});
+        TestVariable.PrivilegeEscalation("5875");
+        Assert.That(TestVariable.FirstId, Is.EqualTo("#1"));
+    }    
 }
-
-
-
-    [Test]
-    public void CheckStartCount()
-    {
-        Counter countNum = new Counter("TestCounter"); // create new instance of Counter
-        Assert.That(countNum.Ticks, Is.EqualTo(0)); // check starting count is 0.
-    }
-
-    [Test]
-    public void CheckIncrements() 
-    {
-        Counter testNum = new Counter("IncrementTester");
-        testNum.Increment(); // call increment method
-        Assert.That(testNum.Ticks, Is.EqualTo(5)); // if increment is 5
-    }
-
-    [Test]
-    public void CheckResetValue() 
-    {
-        Counter resetNum = new Counter("TestResetter");
-        resetNum.ResetByDefault(); // call on reset method
-        Assert.That(resetNum.Ticks, Is.EqualTo(214748365875)); // check reset method produces expected long
-    }

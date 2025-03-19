@@ -1,0 +1,15 @@
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\bin\Debug\net9.0\ObjectUnitTests.exe
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\bin\Debug\net9.0\ObjectUnitTests.deps.json
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\bin\Debug\net9.0\ObjectUnitTests.runtimeconfig.json
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\bin\Debug\net9.0\ObjectUnitTests.dll
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\bin\Debug\net9.0\ObjectUnitTests.pdb
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\ObjectUnitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\ObjectUnitTests.AssemblyInfoInputs.cache
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\ObjectUnitTests.AssemblyInfo.cs
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\ObjectUnitTests.csproj.CoreCompileInputs.cache
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\ObjectUnitTests.sourcelink.json
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\ObjectUnitTests.dll
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\refint\ObjectUnitTests.dll
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\ObjectUnitTests.pdb
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\ObjectUnitTests.genruntimeconfig.cache
+C:\Downloads\swin\OOP\week3\task3.1\ObjectUnitTests\obj\Debug\net9.0\ref\ObjectUnitTests.dll
