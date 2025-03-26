@@ -19,11 +19,15 @@
     }
     public string ShortDescription
     {
-        get { return _name + _identifiers; }
+        get { return $"{_name} ({_identifiers[0]})"; }
     }
     public string LongDescription
     {
         get { return _description; }
+    }
+    public List<string> Identifier
+    {
+        get { return _identifiers; }
     }
 
     // methods
@@ -37,20 +41,46 @@
         id = id.ToLower();
         _identifiers.Add(id);
     }
-    public void RemoveIdentifier(string id) {
-        id = id.ToLower();
-        if (_identifiers.Contains(id)) {
-            _identifiers.Remove(id);
-        } else {
-            Console.WriteLine($"{id} doesn't exist...");
-        }
-    }
+    // 3.2 code:
+    // public void RemoveIdentifier(string id) {
+    //     id = id.ToLower();
+    //     if (_identifiers.Contains(id)) {
+    //         _identifiers.Remove(id);
+    //     } else {
+    //         Console.WriteLine($"{id} doesn't exist...");
+    //     }
+    // }
     public void PrivilegeEscalation(string pin) {
         if (pin == "5875") {
             _identifiers[0] = "#1"; // Tutorial ID = #1
         }
     }
 
+    public bool RemoveIdentifier (string id) {
+        if (id != "") {
+            id = id.ToLower();
+        } else {
+            Console.WriteLine("Please enter a valid item");
+            return false;
+        }
+        if (_identifiers.Contains(id)) {
+            _identifiers.Remove(id);
+            Console.WriteLine($"{id} removed.");
+            return true;
+        } else {
+            Console.WriteLine($"{id} does not exist.");
+            return false;
+        }
+    }
+
+    public void AddItem (string id) {
+        if (_identifiers.Contains(id)) {
+            Console.WriteLine($"{id} already exists.");
+        } else {
+            Console.WriteLine($"{id} added.");
+            _identifiers.Add(id);
+        }
+    }
 }
 
 public class Program
