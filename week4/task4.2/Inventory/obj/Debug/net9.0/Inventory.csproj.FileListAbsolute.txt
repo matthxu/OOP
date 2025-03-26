@@ -1,0 +1,15 @@
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\Inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\Inventory.AssemblyInfoInputs.cache
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\Inventory.AssemblyInfo.cs
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\Inventory.csproj.CoreCompileInputs.cache
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\Inventory.sourcelink.json
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\bin\Debug\net9.0\Inventory.exe
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\bin\Debug\net9.0\Inventory.deps.json
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\bin\Debug\net9.0\Inventory.runtimeconfig.json
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\bin\Debug\net9.0\Inventory.dll
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\bin\Debug\net9.0\Inventory.pdb
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\Inventory.dll
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\refint\Inventory.dll
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\Inventory.pdb
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\Inventory.genruntimeconfig.cache
+C:\Downloads\swin\OOP\week4\task4.2\Inventory\obj\Debug\net9.0\ref\Inventory.dll

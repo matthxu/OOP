@@ -1,0 +1,14 @@
+C:\msys64\home\Matth\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.GeneratedMSBuildEditorConfig.editorconfig
+C:\msys64\home\Matth\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.AssemblyInfoInputs.cache
+C:\msys64\home\Matth\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.AssemblyInfo.cs
+C:\msys64\home\Matth\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.csproj.CoreCompileInputs.cache
+C:\msys64\home\Matth\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.exe
+C:\msys64\home\Matth\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.deps.json
+C:\msys64\home\Matth\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.runtimeconfig.json
+C:\msys64\home\Matth\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.dll
+C:\msys64\home\Matth\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.pdb
+C:\msys64\home\Matth\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.dll
+C:\msys64\home\Matth\ShapeDrawer\obj\Debug\net9.0\refint\ShapeDrawer.dll
+C:\msys64\home\Matth\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.pdb
+C:\msys64\home\Matth\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.genruntimeconfig.cache
+C:\msys64\home\Matth\ShapeDrawer\obj\Debug\net9.0\ref\ShapeDrawer.dll
