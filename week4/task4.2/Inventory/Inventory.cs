@@ -53,9 +53,9 @@ namespace Inventorys
             // for each loop to return list of all items in invent
             get 
             {
-                if (ItemList.Count() < 0) {
-                    return "Inventory is empty.";
-                }
+                // if (ItemList.Count() == 0) {
+                //     return "Inventory is empty.";
+                // }
                 string AllItems = "";
                 foreach (Item item in _Items) {
                     AllItems += $"{item.Name} - {item.ShortDescription} \n";

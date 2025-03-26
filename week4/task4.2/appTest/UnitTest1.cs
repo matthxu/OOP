@@ -1,15 +1,48 @@
-﻿namespace appTest;
+﻿using Adventure.Item;
+using Inventorys;     
+namespace appTest;
 
 public class Tests
 {
-    [SetUp]
-    public void Setup()
+
+    [Test]
+    public void TestFindItem()
     {
+        Item testItem = new Item(new List<string> { "TestId" }, "TestDescription", "TestName");
+        Inventory inventory = new Inventory(new List<Item> { testItem });
+        Assert.That(inventory.HasItem("TestItem"), Is.True);
     }
 
     [Test]
-    public void Test1()
+    public void TestNoFindItem()
     {
-        Assert.Pass();
+        Item UnknownItem = new Item(new List<string> { "TestId" }, "TestDescription", "TestName");
+        Inventory inventory = new Inventory(new List<Item> {});
+        Assert.That(inventory.HasItem("UnknownItem"), Is.False);
+    }
+
+    [Test]
+    public void TestFetchItem()
+    {
+        Item testItem = new Item(new List<string> { "TestId" }, "TestDescription", "TestName");
+        Inventory inventory = new Inventory(new List<Item> { testItem });
+        Item fetchedItem = inventory.Fetch("TestId");
+        Assert.That(fetchedItem, Is.EqualTo(testItem));
+    }
+    [Test]
+    public void TestTakeItem()
+    {
+        Item testItem = new Item(new List<string> { "TestId" }, "TestDescription", "TestName");
+        Inventory inventory = new Inventory(new List<Item> { testItem });
+        Item takenItem = inventory.Take("TestId");
+        Assert.That(inventory.HasItem("TestId"), Is.False);
+    }
+    [Test]
+    public void TestItemList()
+    {
+    Item testItem = new Item(new List<string> { "TestId" }, "TestDescription", "TestName");
+    Inventory inventory = new Inventory(new List<Item> { testItem });
+    // string testItemList = inventory.ItemList;
+    Assert.That(inventory.ItemList, Is.EqualTo("TestName - TestId \n"));
     }
 }

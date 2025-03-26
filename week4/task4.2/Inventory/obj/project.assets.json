@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Matth\\.nuget\\packages\\": {}
+    "C:\\Users\\Matthew\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Downloads\\swin\\OOP\\week4\\task4.2\\Inventory\\Inventory.csproj",
+      "projectUniqueName": "C:\\Users\\Matthew\\Downloads\\OOP\\week4\\task4.2\\Inventory\\Inventory.csproj",
       "projectName": "Inventory",
-      "projectPath": "C:\\Downloads\\swin\\OOP\\week4\\task4.2\\Inventory\\Inventory.csproj",
-      "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
-      "outputPath": "C:\\Downloads\\swin\\OOP\\week4\\task4.2\\Inventory\\obj\\",
+      "projectPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week4\\task4.2\\Inventory\\Inventory.csproj",
+      "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week4\\task4.2\\Inventory\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"

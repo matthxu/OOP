@@ -21,7 +21,7 @@
         }
         public string ShortDescription
         {
-            get { return _name + _identifiers; }
+            get { return firstId; }
         }
         public string LongDescription
         {
