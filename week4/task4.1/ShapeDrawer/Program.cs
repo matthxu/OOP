@@ -80,7 +80,18 @@ namespace ShapeDrawer
         public bool isAt(int xInput, int yInput) {
             return xInput >= _x && xInput <= _x2 && yInput >= _y && yInput <= _y2; // returns true/false if arguments are within parameters of x1,x2,y1,y2
         }
-    }
+
+        public void isAt_Newpt() {
+                Point2D mousePosition = SplashKit.MousePosition(); // returns position of mouse in current window, as x and y in double
+                double pointX = mousePosition.X + 10;
+                double pointY = mousePosition.Y + 20;
+            if (pointX >= _x && pointX <= _x2 && pointY >= _y && pointY <= _y2) {
+                Console.WriteLine("Inside box");
+            } else {
+                Console.WriteLine("Outside box");
+            }
+            }
+        }
     public class Program
     {
         public static void Main()
@@ -92,13 +103,15 @@ namespace ShapeDrawer
                 SplashKit.ProcessEvents();
                 SplashKit.ClearScreen();
                 Point2D mousePosition = SplashKit.MousePosition(); // returns position of mouse in current window, as x and y in double
-                Console.WriteLine("x" + mousePosition.X);
-                Console.WriteLine("y" + mousePosition.Y);
+                // Console.WriteLine("x" + mousePosition.X);
+                // Console.WriteLine("y" + mousePosition.Y);
 
                 if (SplashKit.MouseClicked(MouseButton.LeftButton)) {
                     myShape.shapeX = (float)mousePosition.X;
                     myShape.shapeY = (float)mousePosition.Y;
+                    myShape.isAt_Newpt();
                 }
+
                 if (SplashKit.KeyTyped(KeyCode.SpaceKey) && myShape.isAt((int)mousePosition.X, (int)mousePosition.Y)) {
                     myShape.Color = Color.Random();
                 }

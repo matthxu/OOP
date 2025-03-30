@@ -40,9 +40,16 @@ public class Tests
     [Test]
     public void TestItemList()
     {
-    Item testItem = new Item(new List<string> { "TestId" }, "TestDescription", "TestName");
-    Inventory inventory = new Inventory(new List<Item> { testItem });
-    // string testItemList = inventory.ItemList;
-    Assert.That(inventory.ItemList, Is.EqualTo("TestName - TestId \n"));
+        Item testItem = new Item(new List<string> { "TestId" }, "TestDescription", "TestName");
+        Inventory inventory = new Inventory(new List<Item> { testItem });
+        Assert.That(inventory.ItemList, Is.EqualTo("TestName - TestId \n"));
+    }
+    [Test]
+    public void TestRemoveItem()
+    {
+        Item testItem = new Item(new List<string> { "TestId" }, "TestDescription", "TestName");
+        Inventory inventory = new Inventory(new List<Item> { testItem });
+        Inventory updatedInventory = inventory.RemoveItem(testItem);
+        Assert.That(updatedInventory.HasItem("TestId"), Is.False);
     }
 }

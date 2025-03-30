@@ -30,7 +30,6 @@ namespace Inventorys
             foreach(Item item in _Items) {
                 if (item.AreYou(id)) {
                     _Items.Remove(item);
-                    Console.WriteLine($"Goodbye {item.Name}.");
                     return item;
                 }
             }
@@ -46,6 +45,17 @@ namespace Inventorys
             }
             Console.WriteLine("Item could not be found");
             return null; // can't return an Item object
+        }
+
+        public void RemoveItem(Item itm) {
+            foreach(Item item in _Items) {
+                if (item == itm) {
+                    _Items.Remove(item);
+                    Console.WriteLine("Item removed");
+                    return;
+                }
+            }
+            Console.WriteLine($"{itm.Name} could not be found...");
         }
 
         public string ItemList
