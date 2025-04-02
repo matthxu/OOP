@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\swinAd4\swinAd4.csproj" />
+    <ProjectReference Include="..\swinAdven\swinAdven.csproj" />
   </ItemGroup>
 
 </Project>

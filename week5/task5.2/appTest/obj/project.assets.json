@@ -346,6 +346,16 @@
             "related": ".xml"
           }
         }
+      },
+      "swinAdven/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/swinAdven.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/swinAdven.dll": {}
+        }
       }
     }
   },
@@ -793,6 +803,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "swinAdven/1.0.0": {
+      "type": "project",
+      "path": "../swinAdven/swinAdven.csproj",
+      "msbuildProject": "../swinAdven/swinAdven.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -801,23 +816,24 @@
       "NUnit >= 4.2.2",
       "NUnit.Analyzers >= 4.4.0",
       "NUnit3TestAdapter >= 4.6.0",
-      "coverlet.collector >= 6.0.2"
+      "coverlet.collector >= 6.0.2",
+      "swinAdven >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Matthew\\.nuget\\packages\\": {}
+    "C:\\Users\\Matth\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\appTest\\appTest.csproj",
+      "projectUniqueName": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\appTest\\appTest.csproj",
       "projectName": "appTest",
-      "projectPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\appTest\\appTest.csproj",
-      "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\appTest\\obj\\",
+      "projectPath": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\appTest\\appTest.csproj",
+      "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
+      "outputPath": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\appTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -828,7 +844,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj": {
+              "projectPath": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
