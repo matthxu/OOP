@@ -1,4 +1,5 @@
 using SplashKitSDK;
+
 namespace ShapeDrawer
 {
     public class Shape
@@ -68,6 +69,9 @@ namespace ShapeDrawer
         // METHODS
         // prints shape fields and coordinates
         public void Draw() {
+            if (_selected == true) {
+                DrawOutline();
+            }
             SplashKit.FillRectangle(_color, _x, _y, _width, _height);
             // Console.WriteLine("Color is " + _color);
             // Console.WriteLine("Position X is " + _x);
@@ -79,7 +83,8 @@ namespace ShapeDrawer
         }
 
         public void DrawOutline() {
-                
+            float OutlineOffset = 10; // 5 + 5 (last student digit)
+            SplashKit.FillRectangle(Color.Black, _x - OutlineOffset, _y - OutlineOffset, _width + (OutlineOffset * 2), _height + (OutlineOffset * 2));
         }
 
         public void ComputePerimeter() {
@@ -190,6 +195,17 @@ namespace ShapeDrawer
 
                 if (SplashKit.KeyTyped(KeyCode.SpaceKey)) {
                     myDrawing.Background = Color.Random();
+                }
+
+                if (SplashKit.MouseClicked(MouseButton.RightButton)) {
+                    myDrawing.SelectShapesAt();
+                }
+
+                if (SplashKit.KeyTyped(KeyCode.DeleteKey) || SplashKit.KeyTyped(KeyCode.BackspaceKey)) {
+                    myDrawing.SelectShapesAt();
+                    if (myDrawing.SelectedShapes.Count() > 0) { // prevents access to empty lists
+                    myDrawing.RemoveShape(myDrawing.SelectedShapes[0]);
+                    }
                 }
                 // myShape.Draw();
                 myDrawing.Draw();

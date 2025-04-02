@@ -1,0 +1,5 @@
+C:\Downloads\swin\OOP\week5\task5.1\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Downloads\swin\OOP\week5\task5.1\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.AssemblyInfoInputs.cache
+C:\Downloads\swin\OOP\week5\task5.1\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.AssemblyInfo.cs
+C:\Downloads\swin\OOP\week5\task5.1\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.csproj.CoreCompileInputs.cache
+C:\Downloads\swin\OOP\week5\task5.1\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.sourcelink.json
