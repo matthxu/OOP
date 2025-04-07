@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\appTest\\appTest.csproj": {}
+    "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\appTest\\appTest.csproj": {}
   },
   "projects": {
-    "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\appTest\\appTest.csproj": {
+    "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\appTest\\appTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\appTest\\appTest.csproj",
+        "projectUniqueName": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\appTest\\appTest.csproj",
         "projectName": "appTest",
-        "projectPath": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\appTest\\appTest.csproj",
-        "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
-        "outputPath": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\appTest\\obj\\",
+        "projectPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\appTest\\appTest.csproj",
+        "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\appTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj": {
-                "projectPath": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj"
+              "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj": {
+                "projectPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj"
               }
             }
           }
@@ -89,17 +89,17 @@
         }
       }
     },
-    "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj": {
+    "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj",
+        "projectUniqueName": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj",
         "projectName": "swinAdven",
-        "projectPath": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj",
-        "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
-        "outputPath": "C:\\Downloads\\swin\\OOP\\week5\\task5.2\\swinAdven\\obj\\",
+        "projectPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\swinAdven\\swinAdven.csproj",
+        "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week5\\task5.2\\swinAdven\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"

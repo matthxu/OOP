@@ -57,5 +57,10 @@ namespace AdventureGameObject
             get { return _description; }
         }
 
+        public int IdentifierCount
+        {
+            get { return _identifiers.Count(); }
+        }
+
     }
 }

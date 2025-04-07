@@ -15,8 +15,9 @@ namespace AdventureInventory
         // methods
         public bool HasItem(string id) {
             foreach(Item item in _Items) {
-                item.AreYou(id);
-                return true;
+                if (item.AreYou(id)) {
+                    return true;
+                };
             }
             return false;
         }
@@ -75,6 +76,17 @@ namespace AdventureInventory
                 }
                 return AllItems;
             }
+        }
+
+        public Inventory PutItemWithLimit(Item itm) 
+        {
+            if (itm.IdentifierCount <= 3) {
+                this.Put(itm);
+                Console.WriteLine("Item added!");
+            } else {
+                Console.WriteLine("Item has too many identifiers (limited to 3).");
+            }
+            return this;
         }
     }
 }

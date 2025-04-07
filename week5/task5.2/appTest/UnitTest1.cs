@@ -1,5 +1,4 @@
-﻿using AdventureGameObject;
-using AdventureInventory;
+﻿using AdventureInventory;
 using AdventureItem;
 
 namespace appTest;
@@ -39,7 +38,7 @@ public class Tests
     {
         Item testItem = new Item(new List<string> { "TestId" }, "TestName", "TestDescription");
         Inventory inventory = new Inventory(new List<Item> { testItem });
-        Assert.That(inventory.HasItem("TestItem"), Is.True);
+        Assert.That(inventory.HasItem("TestId"), Is.True);
     }
 
     [Test]
@@ -80,5 +79,17 @@ public class Tests
         Inventory inventory = new Inventory(new List<Item> { testItem });
         inventory.RemoveItem(testItem);
         Assert.That(inventory.HasItem("TestId"), Is.False);
+    }
+    [Test]
+    public void TestPutItemWithLimit()
+    {
+        Item testItem = new Item(new List<string> { "TestId" }, "TestName", "TestDescription");
+        Inventory inventory = new Inventory(new List<Item> {});
+        inventory.PutItemWithLimit(testItem);
+        Assert.That(inventory.HasItem("TestId"), Is.True);
+
+        Item testItem2 = new Item(new List<string> { "TestId2", "TestId3", "TestId4", "TestId5" }, "TestName", "TestDescription");
+        inventory.PutItemWithLimit(testItem2);
+        Assert.That(inventory.HasItem("TestId2"), Is.False);
     }
 }
