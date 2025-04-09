@@ -1,6 +1,6 @@
-﻿using Adventure.Item;
+﻿using AdventureItem;
 
-namespace Inventorys
+namespace AdventureInventory
 {
     public class Inventory
     {
@@ -47,15 +47,18 @@ namespace Inventorys
             return null; // can't return an Item object
         }
 
-        public void RemoveItem(Item itm) {
-            foreach(Item item in _Items) {
-                if (item == itm) {
-                    _Items.Remove(item);
-                    Console.WriteLine("Item removed");
-                    return;
-                }
+        public Inventory RemoveItem(Item item)
+        {
+            if (_Items.Contains(item))
+            {
+                _Items.Remove(item);
+                Console.WriteLine("Item removed");
             }
-            Console.WriteLine($"{itm.Name} could not be found...");
+            else
+            {
+                Console.WriteLine($"{item.Name} could not be found...");
+            }
+            return this; // Return the updated inventory
         }
 
         public string ItemList
@@ -68,7 +71,7 @@ namespace Inventorys
                 // }
                 string AllItems = "";
                 foreach (Item item in _Items) {
-                    AllItems += $"{item.Name} - {item.ShortDescription} \n";
+                    AllItems += $"{item.ShortDescription} \n";
                 }
                 return AllItems;
             }
