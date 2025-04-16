@@ -19,7 +19,7 @@ namespace ShapeDrawer
         }
         public static void WriteColor(this StreamWriter writer, Color clr)
         {
-            writer.WriteLine(“{ 0}\n{ 1}\n{ 2}”, clr.R, clr.G, clr.B);
+            writer.WriteLine("{0}\n{1}\n{2}", clr.R, clr.G, clr.B);
         }
     }
 
@@ -93,19 +93,21 @@ namespace ShapeDrawer
         //         Console.WriteLine("Outside box");
         //     }
         // }
-
-        public virtual void Save(string filename)
+        public virtual void SaveTo(StreamWriter writer)
         {
-            SteamWriter writer;
-            Shape s;
-
-            SteamWriter writer = new SteamdWriter();
-
-
-
-
-
+            writer.WriteColor(Color);
+            writer.WriteLine(shapeX);
+            writer.WriteLine(shapeY);
         }
+
+        public virtual void LoadFrom(StreamReader reader)
+        {
+            Color = reader.ReadColor();
+            shapeX = reader.ReadInteger();
+            shapeY = reader.ReadInteger();
+        }
+
+
     }
 
     public class Drawing
@@ -183,6 +185,55 @@ namespace ShapeDrawer
         {
             return _shapes.Remove(shape);
         }
+
+        public virtual void Save(string filename)
+        {
+            StreamWriter writer = new StreamWriter(filename);
+            writer.WriteColor(Background);
+            writer.WriteLine(ShapesCount);
+
+            foreach (Shape s in _shapes)
+            {
+                s.SaveTo(writer);
+            }
+            writer.Close();
+        }
+
+        public void Load(string filename)
+        {
+            int count;
+            string kind;
+            Shape s;
+            StreamReader reader = new(filename);
+            Background = reader.ReadColor();
+            count = reader.ReadInteger();
+            _shapes.Clear();
+
+            for (int i = 0; i < count; i++)
+            {
+                kind = reader.ReadLine();
+                if (kind == "Rectangle")
+                {
+                    s = new MyRectangle();
+                }
+                else if (kind == "Circle")
+                {
+                    s = new MyCircle();
+                }
+                else if (kind == "Line")
+                {
+                    s = new MyLine();
+                }
+                else
+                {
+                    continue;
+                }
+                s.LoadFrom(reader);
+                _shapes.Add(s);
+            }
+            reader.Close();
+        }
+
     }
 
     public class MyRectangle : Shape
@@ -239,6 +290,22 @@ namespace ShapeDrawer
         //     int perimeter = (_width + _height)*2;
         //     Console.WriteLine($"Perimeter is {perimeter}");
         // }
+        public override void SaveTo(StreamWriter writer)
+        {
+            writer.WriteLine("Rectangle");
+            base.SaveTo(writer);
+            writer.WriteLine(Width);
+            writer.WriteLine(Height);
+        }
+        public override void LoadFrom(StreamReader reader)
+        {
+            base.LoadFrom(reader);
+            Width = reader.ReadInteger();
+            Height = reader.ReadInteger();
+        }
+
+
+
     }
 
     public class MyCircle : Shape
@@ -295,6 +362,18 @@ namespace ShapeDrawer
             // return distanceSquared <= _radius * _radius; // true if within circle
         }
 
+        public override void SaveTo(StreamWriter writer)
+        {
+            writer.WriteLine("Circle");
+            base.SaveTo(writer);
+            writer.WriteLine(Radius);
+        }
+
+        public override void LoadFrom(StreamReader reader)
+        {
+            base.LoadFrom(reader);
+            Radius = reader.ReadInteger();
+        }
     }
 
     public class MyLine : Shape
@@ -307,6 +386,12 @@ namespace ShapeDrawer
         public int LineEnd
         {
             get { return _lineLength; }
+            set { _lineLength = value; }
+        }
+        public int Radius
+        {
+            get { return _radius; }
+            set { _radius = value; }
         }
         // constructor
         public MyLine(Color color) : base(color)
@@ -336,51 +421,64 @@ namespace ShapeDrawer
             // provides 5 pixel leeway in y coordinates
             return x >= shapeX && x <= shapeX + _lineLength && y > shapeY - 5 && y < shapeY + 5;
         }
-    }
-
-    public class MyTriangle : Shape
-    {
-        // fields
-
-        // constructors
-        public MyTriangle(Color color) : base(color)
+        public override void SaveTo(StreamWriter writer)
         {
+            writer.WriteLine("Line");
+            base.SaveTo(writer);
+            writer.WriteLine(LineEnd);
+            writer.WriteLine(Radius);
         }
-        // default constructor
-        public MyTriangle() : this(Color.Blue)
+        public override void LoadFrom(StreamReader reader)
         {
-        }
-        public override void Draw()
-        {
-            // SplashKit.FillTriangle(Color.Yellow, shapeX, shapeY, shapeX + 200, shapeY, shapeX + 100, shapeY + 100);
-            Point2D p1 = SplashKit.PointAt(shapeX, shapeY);
-            Point2D p2 = SplashKit.PointAt(shapeX + 200, shapeY);
-            Point2D p3 = SplashKit.PointAt(shapeX + 100, shapeY + 100);
-            Triangle triangle = SplashKit.TriangleFrom(p1, p2, p3);
-            Point2D mousePosition = SplashKit.MousePosition();
-            SplashKit.FillTriangle(Color.Yellow, triangle);
-        }
-
-        public override void DrawOutline()
-        {
-            // SplashKit.DrawTriangle(Color.Black, shapeX - 5, shapeY - 5, shapeX + 205, shapeY - 5, shapeX + 100, shapeY + 110);
-            Point2D p1 = SplashKit.PointAt(shapeX - 5, shapeY - 5);
-            Point2D p2 = SplashKit.PointAt(shapeX + 205, shapeY - 5);
-            Point2D p3 = SplashKit.PointAt(shapeX + 100, shapeY + 105);
-            Triangle triangle = SplashKit.TriangleFrom(p1, p2, p3);
-            SplashKit.FillTriangle(Color.Black, triangle);
-        }
-        public override bool isAt(int x, int y)
-        {
-            Point2D p1 = SplashKit.PointAt(shapeX, shapeY);
-            Point2D p2 = SplashKit.PointAt(shapeX + 200, shapeY);
-            Point2D p3 = SplashKit.PointAt(shapeX + 100, shapeY + 100);
-            Triangle triangle = SplashKit.TriangleFrom(p1, p2, p3);
-            Point2D point = SplashKit.PointAt(x, y);
-            Console.WriteLine("Inside Triangle");
-            return SplashKit.PointInTriangle(point, triangle);
+            base.LoadFrom(reader);
+            LineEnd = reader.ReadInteger();
+            Radius = reader.ReadInteger();
         }
     }
+
+    // public class MyTriangle : Shape
+    // {
+    //     // fields
+
+    //     // constructors
+    //     public MyTriangle(Color color) : base(color)
+    //     {
+    //     }
+    //     // default constructor
+    //     public MyTriangle() : this(Color.Blue)
+    //     {
+    //     }
+    //     public override void Draw()
+    //     {
+    //         // SplashKit.FillTriangle(Color.Yellow, shapeX, shapeY, shapeX + 200, shapeY, shapeX + 100, shapeY + 100);
+    //         Point2D p1 = SplashKit.PointAt(shapeX, shapeY);
+    //         Point2D p2 = SplashKit.PointAt(shapeX + 200, shapeY);
+    //         Point2D p3 = SplashKit.PointAt(shapeX + 100, shapeY + 100);
+    //         Triangle triangle = SplashKit.TriangleFrom(p1, p2, p3);
+    //         Point2D mousePosition = SplashKit.MousePosition();
+    //         SplashKit.FillTriangle(Color.Yellow, triangle);
+    //     }
+
+    //     public override void DrawOutline()
+    //     {
+    //         // SplashKit.DrawTriangle(Color.Black, shapeX - 5, shapeY - 5, shapeX + 205, shapeY - 5, shapeX + 100, shapeY + 110);
+    //         Point2D p1 = SplashKit.PointAt(shapeX - 5, shapeY - 5);
+    //         Point2D p2 = SplashKit.PointAt(shapeX + 205, shapeY - 5);
+    //         Point2D p3 = SplashKit.PointAt(shapeX + 100, shapeY + 105);
+    //         Triangle triangle = SplashKit.TriangleFrom(p1, p2, p3);
+    //         SplashKit.FillTriangle(Color.Black, triangle);
+    //     }
+    //     public override bool isAt(int x, int y)
+    //     {
+    //         Point2D p1 = SplashKit.PointAt(shapeX, shapeY);
+    //         Point2D p2 = SplashKit.PointAt(shapeX + 200, shapeY);
+    //         Point2D p3 = SplashKit.PointAt(shapeX + 100, shapeY + 100);
+    //         Triangle triangle = SplashKit.TriangleFrom(p1, p2, p3);
+    //         Point2D point = SplashKit.PointAt(x, y);
+    //         Console.WriteLine("Inside Triangle");
+    //         return SplashKit.PointInTriangle(point, triangle);
+    //     }
+    // }
 
     public class Program
     {
@@ -388,8 +486,8 @@ namespace ShapeDrawer
         {
             Rectangle,
             Circle,
-            Line,
-            Triangle
+            Line
+            // Triangle
         }
 
         public static void Main()
@@ -414,9 +512,9 @@ namespace ShapeDrawer
                         case ShapeKind.Rectangle:
                             newShape = new MyRectangle();
                             break;
-                        case ShapeKind.Triangle:
-                            newShape = new MyTriangle();
-                            break;
+                        // case ShapeKind.Triangle:
+                        //     newShape = new MyTriangle();
+                        //     break;
                         default:
                             newShape = new MyLine();
                             break;
@@ -478,10 +576,28 @@ namespace ShapeDrawer
                     kindToAdd = ShapeKind.Line;
                 }
 
-                if (SplashKit.KeyTyped(KeyCode.TKey))
+                // if (SplashKit.KeyTyped(KeyCode.TKey))
+                // {
+                //     kindToAdd = ShapeKind.Triangle;
+                // }
+
+                if (SplashKit.KeyTyped(KeyCode.SKey))
                 {
-                    kindToAdd = ShapeKind.Triangle;
+                    myDrawing.Save("C:/Users/Matth/Desktop/testDrawing.txt");
                 }
+
+                if (SplashKit.KeyTyped(KeyCode.OKey))
+                {
+                    try
+                    {
+                        myDrawing.Load("C:/Users/Matth/Desktop/testDrawing.txt");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.Error.WriteLine("Error loading file: {0}", e.Message);
+                    }
+                }
+
 
                 if (SplashKit.KeyTyped(KeyCode.EscapeKey))
                 {
