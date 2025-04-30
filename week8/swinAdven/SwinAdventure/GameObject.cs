@@ -49,6 +49,17 @@ namespace SwinAdventure
             }
         }
 
+        public virtual void SaveTo(StreamWriter writer)
+        {
+            writer.WriteLine(_name);
+            writer.WriteLine(_description);
+        }
+        public virtual void LoadFrom(StreamReader reader)
+        {
+            _name = reader.ReadLine();
+            _description = reader.ReadLine();
+        }
+
         // properties
         public string Name
         {
@@ -57,7 +68,7 @@ namespace SwinAdventure
 
         public string ShortDescription
         {
-            get { return $"{_name} - {firstId}"; }
+            get { return $"{_name} ({firstId})"; }
         }
 
         public virtual string FullDescription // virtual methods can only be overridden by using override command

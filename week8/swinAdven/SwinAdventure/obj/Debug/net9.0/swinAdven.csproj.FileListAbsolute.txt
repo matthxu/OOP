@@ -33,3 +33,13 @@ C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\obj\Debug\net9.0\swinAdven.A
 C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\obj\Debug\net9.0\swinAdven.AssemblyInfo.cs
 C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\obj\Debug\net9.0\swinAdven.csproj.CoreCompileInputs.cache
 C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\obj\Debug\net9.0\swinAdven.sourcelink.json
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\bin\Debug\net9.0\swinAdven.exe
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\bin\Debug\net9.0\swinAdven.deps.json
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\bin\Debug\net9.0\swinAdven.runtimeconfig.json
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\bin\Debug\net9.0\swinAdven.dll
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\bin\Debug\net9.0\swinAdven.pdb
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\obj\Debug\net9.0\swinAdven.dll
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\obj\Debug\net9.0\refint\swinAdven.dll
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\obj\Debug\net9.0\swinAdven.pdb
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\obj\Debug\net9.0\swinAdven.genruntimeconfig.cache
+C:\Downloads\swin\OOP\week8\swinAdven\SwinAdventure\obj\Debug\net9.0\ref\swinAdven.dll

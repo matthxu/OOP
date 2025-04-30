@@ -11,6 +11,12 @@
             _Items = Item;
         }
 
+        // allows inventory to be initialised empty
+        public Inventory()
+        {
+            _Items = new List<Item>();
+        }
+
         // methods
         public bool HasItem(string id)
         {
@@ -80,12 +86,12 @@
                 // if (ItemList.Count() == 0) {
                 //     return "Inventory is empty.";
                 // }
-                string AllItems = "";
+                List<string> AllItems = new List<string>();
                 foreach (Item item in _Items)
                 {
-                    AllItems += $"{item.ShortDescription} \n";
+                    AllItems.Add(item.ShortDescription);
                 }
-                return AllItems;
+                return string.Join(", ", AllItems);
             }
         }
 

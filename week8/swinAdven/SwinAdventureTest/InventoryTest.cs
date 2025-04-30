@@ -1,6 +1,6 @@
 using SwinAdventure;
 
-public class Tests
+public class InventoryTests
 {
     [Test]
     public void TestFindItem()
@@ -39,7 +39,7 @@ public class Tests
     {
         Item testItem = new Item(new List<string> { "TestId" }, "TestName", "TestDescription");
         Inventory inventory = new Inventory(new List<Item> { testItem });
-        Assert.That(inventory.ItemList, Is.EqualTo("TestName - TestId \n"));
+        Assert.That(inventory.ItemList, Is.EqualTo("TestName (TestId)"));
     }
     [Test]
     public void TestRemoveItem()

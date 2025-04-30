@@ -1,4 +1,6 @@
-public class Tests
+using SwinAdventure;
+
+public class ItemTests
 {
     ///////////////////////////// ITEM UNIT TESTS /////////////////////////////
     [Test]
@@ -11,7 +13,7 @@ public class Tests
     public void ShortDescription()
     {
         Item testItem = new Item(new List<string> { "TestId" }, "TestName", "TestDescription");
-        Assert.That(testItem.ShortDescription, Is.EqualTo("TestName - TestId"));
+        Assert.That(testItem.ShortDescription, Is.EqualTo("TestName (TestId)"));
     }
     [Test]
     public void FullDescription()

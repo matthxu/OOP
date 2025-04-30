@@ -12,9 +12,10 @@ namespace SwinAdventure
         }
 
         // constructor
-        public Player(string name, string desc) : base(new string[] { "me", "inventory" }, name, desc)
+        // ? why do we set another name and desc for player class when it inherits same fields from parent gameobject class?
+        public Player(string name, string desc) : base(new List<string> { "me", "inventory" }, name, desc)
         {
-            _inventory = new Inventory();
+            _inventory = new Inventory(); // inventory initialised as empty with overloaded inventory constructor
         }
 
         // methods
@@ -39,5 +40,21 @@ namespace SwinAdventure
             }
         }
 
+        public override void SaveTo(StreamWriter writer)
+        {
+            base.SaveTo(writer);
+            writer.WriteLine(_inventory.ItemList);
+        }
+
+        public override void LoadFrom(StreamReader reader)
+        {
+            base.LoadFrom(reader);
+            string ItemDescriptionList = reader.ReadLine();
+
+            Console.WriteLine("Player Information");
+            Console.WriteLine(Name);
+            Console.WriteLine(ShortDescription);
+            Console.WriteLine(ItemDescriptionList);
+        }
     }
 }
