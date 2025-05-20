@@ -10,3 +10,6 @@ C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\SwinAdvent
 C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\refint\SwinAdventure.dll
 C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\SwinAdventure.pdb
 C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\ref\SwinAdventure.dll
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\bin\Debug\net9.0\swinAdventure.exe
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\bin\Debug\net9.0\swinAdventure.runtimeconfig.json
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\swinAdventure.genruntimeconfig.cache

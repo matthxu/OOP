@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Downloads\\swin\\OOP\\week10\\swinAdven\\SwinAdventure\\SwinAdventure.csproj": {}
+    "C:\\Downloads\\swin\\OOP\\week10\\swinAdven\\SwinAdventure\\swinAdventure.csproj": {}
   },
   "projects": {
-    "C:\\Downloads\\swin\\OOP\\week10\\swinAdven\\SwinAdventure\\SwinAdventure.csproj": {
+    "C:\\Downloads\\swin\\OOP\\week10\\swinAdven\\SwinAdventure\\swinAdventure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Downloads\\swin\\OOP\\week10\\swinAdven\\SwinAdventure\\SwinAdventure.csproj",
-        "projectName": "SwinAdventure",
-        "projectPath": "C:\\Downloads\\swin\\OOP\\week10\\swinAdven\\SwinAdventure\\SwinAdventure.csproj",
+        "projectUniqueName": "C:\\Downloads\\swin\\OOP\\week10\\swinAdven\\SwinAdventure\\swinAdventure.csproj",
+        "projectName": "swinAdventure",
+        "projectPath": "C:\\Downloads\\swin\\OOP\\week10\\swinAdven\\SwinAdventure\\swinAdventure.csproj",
         "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
         "outputPath": "C:\\Downloads\\swin\\OOP\\week10\\swinAdven\\SwinAdventure\\obj\\",
         "projectStyle": "PackageReference",

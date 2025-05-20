@@ -56,68 +56,53 @@ public class LookCommandTests
     }
 
     [Test]
-    public void TestLookAtItemInBag() // Renamed from TestLookAtGemInBag for clarity with _testItem
+    public void TestLookAtGemInBag()
     {
         _testPlayer.Inventory.Put(_testMoneyBag);
         _testMoneyBag.Inventory.Put(_testItem);
 
-        string[] commandText = { "look", "at", "coin", "in", "bag" }; // Using "coin" and "bag" IDs
+        string[] commandText = { "look", "at", "gem", "in", "bag" }; // Using "coin" and "bag" IDs
         string result = _testLookCommand.Execute(_testPlayer, commandText);
         Assert.That(result, Is.EqualTo(_testItem.FullDescription));
     }
 
-    // [Test]
-    // public void TestLookAtItemInNoBag() // Renamed from TestLookAtGemInNoBag
-    // {
-    //     // _testMoneyBag is NOT in player's inventory.
-    //     string[] commandText = { "look", "at", "coin", "in", "bag" };
-    //     string result = _testLookCommand.Execute(_testPlayer, commandText);
-    //     string expected = "I cannot find the bag."; // Assuming "bag" is the ID used in command
-    //     Assert.That(result, Is.EqualTo(expected));
-    // }
+    [Test]
+    public void TestLookAtGemInNoBag()
+    {
+        string[] commandText = { "look", "at", "gem", "in", "bag" };
+        string result = _testLookCommand.Execute(_testPlayer, commandText);
+        string expected = "I cannot find the bag.";
+        Assert.That(result, Is.EqualTo(expected));
+    }
 
-    // [Test]
-    // public void TestLookAtNoItemInBag() // Renamed from TestLookAtNoGemInBag
-    // {
-    //     _testPlayer.Inventory.Put(_testMoneyBag);
-    //     // _testMoneyBag is in player's inventory, but it's empty or doesn't have a "diamond".
-    //     string[] commandText = { "look", "at", "diamond", "in", "bag" };
-    //     string result = _testLookCommand.Execute(_testPlayer, commandText);
-    //     string expected = $"I cannot find the diamond in {_testMoneyBag.Name}.";
-    //     Assert.That(result, Is.EqualTo(expected));
-    // }
+    [Test]
+    public void TestLookAtNoGemInBag()
+    {
+        _testPlayer.Inventory.Put(_testMoneyBag);
+        string[] commandText = { "look", "at", "gem", "in", "bag" };
+        string result = _testLookCommand.Execute(_testPlayer, commandText);
+        string expected = $"I can't find the gem";
+        Assert.That(result, Is.EqualTo(expected));
+    }
 
-    // [Test]
-    // public void TestInvalidLook()
-    // {
-    //     string[] cmdLookAround = { "look", "around" };
-    //     string resultLookAround = _testLookCommand.Execute(_testPlayer, cmdLookAround);
-    //     Assert.That(resultLookAround, Is.EqualTo("What do you want to look at?"));
+    [Test]
+    // Test look options to check all error conditions. This include “look around”, or “hello your student ID”, “look at your name”.
+    public void TestInvalidLook()
+    {
+        string[] cmdLookAround = { "look", "around" };
+        string resultLookAround = _testLookCommand.Execute(_testPlayer, cmdLookAround);
+        Assert.That(resultLookAround, Is.EqualTo("I don't know how to look like that"));
 
-    //     string[] cmdLookAtMissingItem = { "look", "at" };
-    //     string resultLookAtMissingItem = _testLookCommand.Execute(_testPlayer, cmdLookAtMissingItem);
-    //     Assert.That(resultLookAtMissingItem, Is.EqualTo("I don’t know how to look like that"));
+        string[] cmdHelloId = { "hello", "player", "105645875" };
+        string resultHelloId = _testLookCommand.Execute(_testPlayer, cmdHelloId);
+        Assert.That(resultHelloId, Is.EqualTo("Error in look input"));
 
-    //     string[] cmdLookAtGemInMissingContainer = { "look", "at", "gem", "in" };
-    //     string resultLookAtGemInMissingContainer = _testLookCommand.Execute(_testPlayer, cmdLookAtGemInMissingContainer);
-    //     Assert.That(resultLookAtGemInMissingContainer, Is.EqualTo("I don’t know how to look like that"));
+        string[] cmdLookInBag = { "look", "in", "bag" };
+        string resultLookInBag = _testLookCommand.Execute(_testPlayer, cmdLookInBag);
+        Assert.That(resultLookInBag, Is.EqualTo("What do you want to look at?"));
 
-    //     string[] cmdTooManyParams = { "look", "at", "gem", "in", "bag", "in", "box" };
-    //     string resultTooManyParams = _testLookCommand.Execute(_testPlayer, cmdTooManyParams);
-    //     Assert.That(resultTooManyParams, Is.EqualTo("I don’t know how to look like that"));
-
-    //     string[] cmdWrongPreposition1 = { "look", "on", "gem" };
-    //     string resultWrongPreposition1 = _testLookCommand.Execute(_testPlayer, cmdWrongPreposition1);
-    //     Assert.That(resultWrongPreposition1, Is.EqualTo("What do you want to look at?"));
-
-    //     string[] cmdWrongPreposition2 = { "look", "at", "gem", "on", "table" };
-    //     string resultWrongPreposition2 = _testLookCommand.Execute(_testPlayer, cmdWrongPreposition2);
-    //     Assert.That(resultWrongPreposition2, Is.EqualTo("What do you want to look in?"));
-
-    //     string[] cmdNotLook = { "go", "at", "gem" };
-    //     string resultNotLook = _testLookCommand.Execute(_testPlayer, cmdNotLook);
-    //     Assert.That(resultNotLook, Is.EqualTo("Error in look input"));
-    // }
-
-
+        string[] cmdLookOnGround = { "look", "at", "gem", "on", "ground" };
+        string resultLookOnGround = _testLookCommand.Execute(_testPlayer, cmdLookOnGround);
+        Assert.That(resultLookOnGround, Is.EqualTo("What do you want to look in?"));
+    }
 }
