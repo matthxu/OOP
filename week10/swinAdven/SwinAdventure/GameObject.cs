@@ -3,16 +3,16 @@ namespace SwinAdventure
     public abstract class GameObject // abstract classes cannot be instantiated directly, but inherited by its subclasses
     {
         // fields
-        protected string _description; // protected - classes deriving from this class can access
-        protected string _name;
         protected List<string> _identifiers;
+        protected string _name;
+        protected string _description; // protected - classes deriving from this class can access
 
         // constructor
         public GameObject(List<string> identifiers, string name, string description)
         {
+            _identifiers = identifiers;
             _name = name;
             _description = description;
-            _identifiers = identifiers;
         }
 
         // methods

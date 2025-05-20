@@ -12,7 +12,6 @@ namespace SwinAdventure
         }
 
         // constructor
-        // ? why do we set another name and desc for player class when it inherits same fields from parent gameobject class?
         public Player(string name, string desc) : base(new List<string> { "me", "inventory" }, name, desc)
         {
             _inventory = new Inventory(); // inventory initialised as empty with overloaded inventory constructor
