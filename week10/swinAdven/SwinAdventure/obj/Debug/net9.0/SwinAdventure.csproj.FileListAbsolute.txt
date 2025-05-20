@@ -1,0 +1,12 @@
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\bin\Debug\net9.0\SwinAdventure.deps.json
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\bin\Debug\net9.0\SwinAdventure.dll
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\bin\Debug\net9.0\SwinAdventure.pdb
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\SwinAdventure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\SwinAdventure.AssemblyInfoInputs.cache
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\SwinAdventure.AssemblyInfo.cs
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\SwinAdventure.csproj.CoreCompileInputs.cache
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\SwinAdventure.sourcelink.json
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\SwinAdventure.dll
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\refint\SwinAdventure.dll
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\SwinAdventure.pdb
+C:\Downloads\swin\OOP\week10\swinAdven\SwinAdventure\obj\Debug\net9.0\ref\SwinAdventure.dll
