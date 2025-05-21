@@ -17,23 +17,25 @@ public class LocationTest
         _testItem = new Item(new List<string> { "gem", "Ruby" }, "A Ruby", "A bright pink ruby");
     }
 
-    // [Test]
-    // public void TestLocationExists()
-    // {
-    //     string[] commandText = { "look" };
-    //     string result = _testLookCommand.Execute(_testPlayer, commandText);
-    //     string expected = "You are in Testbed. For testing....\nHere, you can see :";
-    //     Assert.That(result, Is.EqualTo(expected));
-    // }
+    [Test]
+    public void TestLocationExists()
+    {
+        string[] commandText = { "look" };
+        _testPlayer.Location = _testLocation;
+        string result = _testLookCommand.Execute(_testPlayer, commandText);
+        string expected = "You are in Testbed. For testing...\nHere, you can see :\n";
+        Assert.That(result, Is.EqualTo(expected));
+    }
 
-    // [Test]
-    // public void TestLocationItems()
-    // {
-    //     _testLocation.Inventory.Put(_testItem);
-    //     string[] commandText = { "look" };
-    //     string result = _testLookCommand.Execute(_testPlayer, commandText);
-    //     string expected = "You are in Testbed. For testing....\nHere, you can see :\nA Ruby(gem)";
-    //     Assert.That(result, Is.EqualTo(expected));
-    // }
+    [Test]
+    public void TestLocationItems()
+    {
+        _testPlayer.Location = _testLocation;
+        _testLocation.Inventory.Put(_testItem);
+        string[] commandText = { "look" };
+        string result = _testLookCommand.Execute(_testPlayer, commandText);
+        string expected = "You are in Testbed. For testing...\nHere, you can see :\nA Ruby (gem)";
+        Assert.That(result, Is.EqualTo(expected));
+    }
 
 }

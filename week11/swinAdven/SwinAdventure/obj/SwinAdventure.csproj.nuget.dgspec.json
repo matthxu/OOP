@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Downloads\\swin\\OOP\\week11\\swinAdven\\SwinAdventure\\SwinAdventure.csproj": {}
+    "C:\\Users\\Matthew\\Downloads\\OOP\\week11\\swinAdven\\SwinAdventure\\swinAdventure.csproj": {}
   },
   "projects": {
-    "C:\\Downloads\\swin\\OOP\\week11\\swinAdven\\SwinAdventure\\SwinAdventure.csproj": {
+    "C:\\Users\\Matthew\\Downloads\\OOP\\week11\\swinAdven\\SwinAdventure\\swinAdventure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Downloads\\swin\\OOP\\week11\\swinAdven\\SwinAdventure\\SwinAdventure.csproj",
-        "projectName": "SwinAdventure",
-        "projectPath": "C:\\Downloads\\swin\\OOP\\week11\\swinAdven\\SwinAdventure\\SwinAdventure.csproj",
-        "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
-        "outputPath": "C:\\Downloads\\swin\\OOP\\week11\\swinAdven\\SwinAdventure\\obj\\",
+        "projectUniqueName": "C:\\Users\\Matthew\\Downloads\\OOP\\week11\\swinAdven\\SwinAdventure\\swinAdventure.csproj",
+        "projectName": "swinAdventure",
+        "projectPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week11\\swinAdven\\SwinAdventure\\swinAdventure.csproj",
+        "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthew\\Downloads\\OOP\\week11\\swinAdven\\SwinAdventure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"

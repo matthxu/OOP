@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SwinAdventureTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4baf5f1ee3fc129d6e4d0b8545471d7a9692d4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0c66ea09d0ee64498c04cab7c56b288d00a44f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("SwinAdventureTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SwinAdventureTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

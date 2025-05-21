@@ -17,6 +17,9 @@ public class LookCommandTests
 
         _testItem = new Item(new List<string> { "gem", "Ruby" }, "A Ruby", "A bright pink ruby");
         _testMoneyBag = new Bag(new List<string> { "bag", "money" }, "Money Bag", "A bag that contains Valuables");
+        Location testRoom = new Location(new List<string> { "room" }, "A Test Room", "A plain room used for testing.");
+        _testPlayer.Location = testRoom;
+
 
         _testPlayer.Inventory.Put(_testItem);
     }

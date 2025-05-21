@@ -96,7 +96,7 @@ namespace MainProgram
                     finished = true;
                     break;
                 }
-                string[] split = command.Split("");
+                string[] split = command.Split(" ");
                 Console.WriteLine(cmd.Execute(newPlayer, split));
             }
 

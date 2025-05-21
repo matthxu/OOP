@@ -76,15 +76,34 @@ namespace MainProgram
             newPlayer.Location = startingLocation;
             Item sand = new(new List<string> { "junk", "sand" }, "Sand", "Yellow sand.");
             startingLocation.Inventory.Put(sand);
-
             Item donut = new(new List<string> { "food", "donut" }, "Donut", "A cinammon donut.");
             Item shoes = new(new List<string> { "clothes", "shoes" }, "Shoes", "An old pair of shoes.");
-
             newPlayer.Inventory.Put(donut);
             newPlayer.Inventory.Put(shoes);
-
             Bag rucksack = new(new List<string> { "bag", "rucksack" }, "Rucksack", "A large rucksack.");
             newPlayer.Inventory.Put(rucksack);
+
+
+
+            // verification task
+            Item apple = new(new List<string> { "food", "apple" }, "apple", "A apple.");
+            Item banana = new(new List<string> { "food", "banana" }, "banana", "A banana.");
+            Item orange = new(new List<string> { "food", "orange" }, "orange", "A cinammon orange.");
+            Bag newbag1 = new(new List<string> { "bag", "smallbag" }, "TestBag", "For verification");
+            newPlayer.Inventory.Put(newbag1);
+            newbag1.Inventory.Put(apple);
+            newbag1.Inventory.Put(banana);
+            Bag newbag2 = new(new List<string> { "bag", "bigbag" }, "TestBag2", "For verification");
+            newbag2.Inventory.Put(orange);
+            newPlayer.Inventory.Put(newbag2);
+            LookCommand testCmd = new LookCommand(new List<string> { "" });
+            string[] testString = ["look", "at", "smallbag"];
+            string[] testString2 = ["look", "at", "bigbag"];
+            Console.WriteLine(testCmd.Execute(newPlayer, testString));
+            Console.WriteLine(testCmd.Execute(newPlayer, testString2));
+
+
+
 
             Item persimmon = new(new List<string> { "food", "persimmon" }, "Persimmon", "A ripe persimmon.");
             rucksack.Inventory.Put(persimmon);
