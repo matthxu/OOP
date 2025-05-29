@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matthew\\Downloads\\ClockAppTemplate\\ClockAppTemplate\\ClockApp.csproj": {}
+    "C:\\Downloads\\swin\\OOP\\week12\\ClockAppTemplate\\ClockAppTemplate\\ClockApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matthew\\Downloads\\ClockAppTemplate\\ClockAppTemplate\\ClockApp.csproj": {
+    "C:\\Downloads\\swin\\OOP\\week12\\ClockAppTemplate\\ClockAppTemplate\\ClockApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matthew\\Downloads\\ClockAppTemplate\\ClockAppTemplate\\ClockApp.csproj",
+        "projectUniqueName": "C:\\Downloads\\swin\\OOP\\week12\\ClockAppTemplate\\ClockAppTemplate\\ClockApp.csproj",
         "projectName": "ClockApp",
-        "projectPath": "C:\\Users\\Matthew\\Downloads\\ClockAppTemplate\\ClockAppTemplate\\ClockApp.csproj",
-        "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matthew\\Downloads\\ClockAppTemplate\\ClockAppTemplate\\obj\\",
+        "projectPath": "C:\\Downloads\\swin\\OOP\\week12\\ClockAppTemplate\\ClockAppTemplate\\ClockApp.csproj",
+        "packagesPath": "C:\\Users\\Matth\\.nuget\\packages\\",
+        "outputPath": "C:\\Downloads\\swin\\OOP\\week12\\ClockAppTemplate\\ClockAppTemplate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Matth\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
